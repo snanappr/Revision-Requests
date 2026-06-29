@@ -35,11 +35,13 @@
   .week:last-child { margin-bottom: 0; }
   h3 { font-size: 19px; color: #111827; margin: 0 0 8px; padding-bottom: 6px; border-bottom: 1px solid #e5e7eb; }
   h4 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; color: #6b7280; margin: 20px 0 8px; }
-  .total-pill {
-    display: inline-block; background: #eff6ff; border: 1px solid #bfdbfe;
-    color: #1e40af; padding: 6px 12px; border-radius: 999px;
-    font-size: 13px; margin-bottom: 8px;
+  .pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+  .total-pill, .qa-pill {
+    display: inline-block; padding: 6px 12px;
+    border-radius: 999px; font-size: 13px;
   }
+  .total-pill { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; }
+  .qa-pill { background: #fdf2f8; border: 1px solid #fbcfe8; color: #be185d; }
   table { border-collapse: collapse; width: 100%; font-size: 13.5px; margin-bottom: 4px; }
   th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; vertical-align: top; }
   th { background: #f9fafb; font-weight: 600; color: #374151; font-size: 13px; }
@@ -63,20 +65,23 @@
   <div class="tabs">
     <button class="tab-btn active" data-tab="tab-april">April</button><button class="tab-btn" data-tab="tab-may">May</button><button class="tab-btn" data-tab="tab-june">June</button>
   </div>
-  <div class="tab-pane active" id="tab-april"><div class="month-summary"><span>Total for April:</span> <strong>17</strong> valid revision requests across 1 week</div>
+  <div class="tab-pane active" id="tab-april"><div class="month-summary"><span>Total for April:</span> <strong>17</strong> total disputes (<strong>5</strong> Snappr QA at fault) across 1 week</div>
 <section class="week">
   <h3>Apr 20 – Apr 26</h3>
-  <div class="total-pill">Valid revision requests: <strong>17</strong></div>
+  <div class="pills">
+    <span class="total-pill">Total Disputes: <strong>17</strong></span>
+    <span class="qa-pill">Snappr QA at fault: <strong>5</strong></span>
+  </div>
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
 <thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">4</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
 <tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">3</td><td class="num">0</td><td class="num">2</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">2</td><td class="num">2</td></tr>
 <tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">3</td><td class="num">1</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">5</td><td class="num">6</td><td class="num">0</td><td class="num">5</td><td class="num">1</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">4</td><td class="num">0</td><td class="num">5</td><td class="num">4</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -84,27 +89,30 @@
 <thead><tr><th style="width:7%">Date</th><th style="width:55%">Customer Dispute</th><th style="width:25%">Issue</th><th style="width:13%">Source</th></tr></thead>
 <tbody>
 <tr><td class="date">Mon 4/20</td><td>Client requested a refund citing missing detail shots, poor framing, and lack of post-production. RAW files confirm framing issues, but edits met standard and requested fixes are advanced edits not in basic editing.</td><td class="issue"><strong>Expectation Mismatch</strong> — Unmet Expectations</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Mon 4/20</td><td>eCX flagged lighting issues, heavy shadows, and shiny skin tones. No-Touch booking, but the lower half of the gallery did appear dark and could have been improved with shadow-lifting.</td><td class="issue"><strong>Quality Issues</strong> — Brightness/Exposure</td><td class="source source-Process">No QA: Skip QA</td></tr>
-<tr><td class="date">Mon 4/20</td><td>eRep reported a TIAA ad&#x27;s green background was rendered blue in the edits. RAW files themselves already appeared blue, so the gallery accurately reflects the source.</td><td class="issue"><strong>Quality Issues</strong> — White Balance/Color</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Mon 4/20</td><td>eCX requested all RAWs added, more solid backgrounds, and several advanced edits (smoothie restyling, oil-mark removal, color changes). Truncated booking; advanced edits aren&#x27;t included in basic editing.</td><td class="issue"><strong>Client Preference</strong> — Advanced Edits</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Mon 4/20</td><td>eCX flagged lighting issues, heavy shadows, and shiny skin tones. No-Touch booking, but the lower half of the gallery did appear dark and could have been improved with shadow-lifting.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Process">No QA: Skip QA</td></tr>
+<tr><td class="date">Mon 4/20</td><td>eRep reported a TIAA ad&#x27;s green background was rendered blue in the edits. RAW files themselves already appeared blue, so the gallery accurately reflects the source.</td><td class="issue"><strong>Quality Issues</strong> — White Balance / Color</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Mon 4/20</td><td>eCX requested all RAWs added, more solid backgrounds, and several advanced edits (smoothie restyling, oil-mark removal, color changes). Truncated booking; advanced edits aren&#x27;t included in basic editing.</td><td class="issue"><strong>Client Preference</strong> — Advanced Edits</td><td class="source source-Process">Process</td></tr>
 <tr><td class="date">Mon 4/20</td><td>eRep said sunroof shots were missing from the gallery. All unique shots from RAW were included, and the requested sunroof photo is in fact present.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Mon 4/20</td><td>Client looking for a specific solo photo of herself in a gold dress. All 178 RAW photos were edited and submitted, and the requested photo is included.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Tue 4/21</td><td>PG requested ~20 additional shots and flagged oversaturated greens on a Porsche shoot. Truncated booking with all required shots present and edits meeting standard — additional photos are CX preference.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Tue 4/21</td><td>eRep flagged no photos of the soft top in the closed position despite it appearing in a video. Truncated booking; the closed soft-top wasn&#x27;t in the RAWs because the PG didn&#x27;t shoot a walk-around in that configuration.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-PG">Photographer</td></tr>
+<tr><td class="date">Tue 4/21</td><td>PG requested ~20 additional shots and flagged oversaturated greens on a Porsche shoot. Truncated booking with all required shots present and edits meeting standard — additional photos are CX preference.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Process">Process</td></tr>
+<tr><td class="date">Tue 4/21</td><td>eRep flagged no photos of the soft top in the closed position despite it appearing in a video. Truncated booking; the closed soft-top wasn&#x27;t in the RAWs because the PG didn&#x27;t shoot a walk-around in that configuration.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Process">Process</td></tr>
 <tr><td class="date">Tue 4/21</td><td>eRep said photos of the installer and the customer holding a remote were missing. Installer images were present, but QA/editor missed the remote shot, which was available in the RAWs.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-QA">QA</td></tr>
-<tr><td class="date">Wed 4/22</td><td>eRep reported missing exterior 3/4 walkarounds and a poorly framed driver-side front 3/4. PG submitted 6 of the required 6 walkarounds, but one was uncorrectably off-center, dropping the count below requirement — should have been flagged in the GNC.</td><td class="issue"><strong>Quality Issues</strong> — Cropping/Straightening/Distortion/Angles</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Wed 4/22</td><td>eRep reported missing exterior 3/4 walkarounds and a poorly framed driver-side front 3/4. PG submitted 6 of the required 6 walkarounds, but one was uncorrectably off-center, dropping the count below requirement — should have been flagged in the GNC.</td><td class="issue"><strong>Quality Issues</strong> — Cropping / Straightening / Distortion / Angles</td><td class="source source-QA">QA</td></tr>
 <tr><td class="date">Wed 4/22</td><td>eRep flagged visible lens dust throughout the gallery. Lens dust was clearly visible and should have been flagged during QA but was missed.</td><td class="issue"><strong>Quality Issues</strong> — Distractions</td><td class="source source-QA">QA</td></tr>
 <tr><td class="date">Wed 4/22</td><td>Client wanted a moody, dark/warm finish for restaurant shots; gallery came back brightened and partially overexposed. PG had noted the preferred style, but the submitted gallery still passed Snappr Standards.</td><td class="issue"><strong>Client Preference</strong> — Visual Style/Preference</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Thu 4/23</td><td>eRep requested glare/overexposure be removed from headshot backgrounds. Harsh glare from a mirror behind the client is affecting quality, but the fix requires advanced editing (additional charges).</td><td class="issue"><strong>Client Preference</strong> — Advanced Edits</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Fri 4/24</td><td>Customer reported missing kitchen and living area shots. RAWs confirm no kitchen photos were uploaded by the PG; living area is ambiguous, but all rooms and unique shots from RAW were included.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Fri 4/24</td><td>Client reported that shots of a bluebonnet necklace were missing. The necklace was the only one in the RAWs and was a unique shot — full QA failed to catch that it was missing.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-QA">QA</td></tr>
-<tr><td class="date">Sat 4/25</td><td>eRep flagged grainy exterior walkaround photos shot at high ISO. Noise is very apparent (sunset shoot); since the affected images are required shots and couldn&#x27;t be corrected in editing, the gallery should have been flagged.</td><td class="issue"><strong>Quality Issues</strong> — Resolution/Clarity</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Sat 4/25</td><td>eRep flagged grainy exterior walkaround photos shot at high ISO. Noise is very apparent (sunset shoot); since the affected images are required shots and couldn&#x27;t be corrected in editing, the gallery should have been flagged.</td><td class="issue"><strong>Quality Issues</strong> — Resolution / Clarity</td><td class="source source-QA">QA</td></tr>
 <tr><td class="date">Sat 4/25</td><td>eRep asked for the group shot to be replaced because one person wasn&#x27;t smiling. PG didn&#x27;t capture an alternative smiling version despite the direction being explicit in the shoot guide.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-PG">Photographer</td></tr>
 </tbody></table>
-</section></div><div class="tab-pane" id="tab-may"><div class="month-summary"><span>Total for May:</span> <strong>98</strong> valid revision requests across 5 weeks</div>
+</section></div><div class="tab-pane" id="tab-may"><div class="month-summary"><span>Total for May:</span> <strong>98</strong> total disputes (<strong>10</strong> Snappr QA at fault) across 5 weeks</div>
 <section class="week">
   <h3>Apr 27 – May 3</h3>
-  <div class="total-pill">Valid revision requests: <strong>13</strong></div>
+  <div class="pills">
+    <span class="total-pill">Total Disputes: <strong>13</strong></span>
+    <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+  </div>
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
@@ -128,7 +136,7 @@
 <tr><td class="date">Wed 4/29</td><td>eRep said client reported missing images and asked for all photos to be uploaded. Vertical shots of glass standees weren&#x27;t included, but the gallery is guide-compliant with interior/exterior minimums met.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Wed 4/29</td><td>eRep said client reported missing images and asked for all photos to be uploaded. Vertical shots of glass standees weren&#x27;t included, but the gallery is guide-compliant with interior/exterior minimums met.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Wed 4/29</td><td>eRep flagged that two similar Rolls Royce galleries (1958 black/silver and 1956 dark green/cream) shot the same day had cross-mixed photos and missing videos. Some interior shots from the 1956 (tan upholstery) were placed in the 1958 (gray upholstery) gallery; the upholstery colors were hard to distinguish due to a strong orange cast from warm interior lighting.</td><td class="issue"><strong>Wrong Photos/Videos</strong> — Wrong RAWs Uploaded</td><td class="source source-Process">Process</td></tr>
-<tr><td class="date">Wed 4/29</td><td>Seller reported that exterior images appear faded with inconsistent color and provided reference photos for correction. Walk-around images 04, 06, and 08 do show noticeable inconsistencies that could be improved with added warmth and HSL red-tone adjustments.</td><td class="issue"><strong>Quality Issues</strong> — White Balance/Color</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Wed 4/29</td><td>Seller reported that exterior images appear faded with inconsistent color and provided reference photos for correction. Walk-around images 04, 06, and 08 do show noticeable inconsistencies that could be improved with added warmth and HSL red-tone adjustments.</td><td class="issue"><strong>Quality Issues</strong> — White Balance / Color</td><td class="source source-QA">QA</td></tr>
 <tr><td class="date">Wed 4/29</td><td>eRep requested an underbody shot with no GNC or notes on the booking. The underbody shot was present in the RAW files but was missed by QA.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-QA">QA</td></tr>
 <tr><td class="date">Fri 5/1</td><td>Client provided a Dropbox link with the correct photos and asked for the gallery to be corrected. PG uploaded the wrong RAW file.</td><td class="issue"><strong>Wrong Photos/Videos</strong> — Wrong Photos Delivered</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Fri 5/1</td><td>PG relayed that the client said VIN and engine block number photos weren&#x27;t delivered. UID submitted was incorrect; per the rev-req thread the correct booking UID is 0373bd00…, and the VIN is in fact present in that submitted gallery.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
@@ -138,19 +146,22 @@
 </section>
 <section class="week">
   <h3>May 4 – May 10</h3>
-  <div class="total-pill">Valid revision requests: <strong>20</strong></div>
+  <div class="pills">
+    <span class="total-pill">Total Disputes: <strong>20</strong></span>
+    <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+  </div>
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
 <thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">1</td><td class="num">1</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">1</td></tr>
 <tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">3</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">1</td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">3</td><td class="num">0</td><td class="num">1</td><td class="num">3</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
 <tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
 <tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">5</td><td class="num">5</td><td class="num">2</td><td class="num">3</td><td class="num">5</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">6</td><td class="num">5</td><td class="num">2</td><td class="num">2</td><td class="num">5</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -160,28 +171,31 @@
 <tr><td class="date">Mon 5/4</td><td>eRep said an additional video showing the hood scoop was missing from the gallery. All PG-uploaded videos are included; no videos are missing and all required videos were submitted.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Mon 5/4</td><td>PG relayed the vehicle owner&#x27;s complaint that not all uploaded photos were edited and sent to BaT. Truncated booking; all required shots are in the gallery and the additional photos are a CX preference.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-Process">Process</td></tr>
 <tr><td class="date">Mon 5/4</td><td>eRep flagged that only 4 of 5 units were uploaded — unit 8512-307 was missing. Per the PG, one unit was occupied and unavailable; the shoot covered a different unit than booked but was set to GNC Pass.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Mon 5/4</td><td>PG escalated that the customer found the edits &quot;horrendous&quot; and asked to re-edit personally. Quality was compromised by location/timing — most images appear overexposed and hazy; clarity/dehaze adjustments and more consistent exposure would have improved them.</td><td class="issue"><strong>Quality Issues</strong> — Brightness/Exposure</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Mon 5/4</td><td>PG escalated that the customer found the edits &quot;horrendous&quot; and asked to re-edit personally. Quality was compromised by location/timing — most images appear overexposed and hazy; clarity/dehaze adjustments and more consistent exposure would have improved them.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Tue 5/5</td><td>eRep said up to 20 additional exterior photos should be in the gallery. All required shots were included; the Editing Team added additional non-required shots post-report.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-Editor">Editor</td></tr>
 <tr><td class="date">Tue 5/5</td><td>eRep reported a DoorDash editing job had only 1 photo when the PG uploaded 3. This is a refunded job and only one photo was required for completion.</td><td class="issue"><strong>Client Preference</strong> — Advanced Edits</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Wed 5/6</td><td>eRep said the gallery for a 2004 Honda mixed photos from the original shoot and reshoot, when the reshoot should have replaced everything. No alternate versions exist in the RAW folder and there were no instructions barring the use of original-shoot photos.</td><td class="issue"><strong>Expectation Mismatch</strong> — Unmet Expectations</td><td class="source source-Process">Leadership/Process</td></tr>
 <tr><td class="date">Wed 5/6</td><td>PG flagged that photos for a Ducati motorcycle booking were mistakenly uploaded under another shoot&#x27;s UID; correct booking was already uploaded. PG confirmed wrong RAWs — the booking was a Ducati but a Lexus shoot&#x27;s files were uploaded.</td><td class="issue"><strong>Wrong Photos/Videos</strong> — Wrong RAWs Uploaded</td><td class="source source-PG">Photographer</td></tr>
-<tr><td class="date">Wed 5/6</td><td>eRep requested a re-edit citing overexposed shots and red paint that didn&#x27;t match three reference photos. BaT automation/full QA; gallery passed Snappr Standards — client has a preferred visual style.</td><td class="issue"><strong>Quality Issues</strong> — Brightness/Exposure</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Wed 5/6</td><td>Self-service customer reported a 3-hole punch had &quot;disappeared&quot; across several photos and that products appeared crooked. QA missed flagging the missing 3-hole punch.</td><td class="issue"><strong>Client Preference</strong> — Advanced Edits</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Wed 5/6</td><td>eRep requested a re-edit citing overexposed shots and red paint that didn&#x27;t match three reference photos. BaT automation/full QA; gallery passed Snappr Standards — client has a preferred visual style.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Wed 5/6</td><td>Self-service customer reported a 3-hole punch had &quot;disappeared&quot; across several photos and that products appeared crooked. QA missed flagging the missing 3-hole punch.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-QA">QA</td></tr>
 <tr><td class="date">Wed 5/6</td><td>eRep relayed Casa Kahlo&#x27;s request to confirm no menu-item photos were missed (owner said individual shots of each dish were captured). All dishes are in the final gallery; only duplicate photos were culled.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Thu 5/7</td><td>eRep flagged that the exterior walkaround video was only 3 seconds long. Full QA automation — a longer walkaround was available in the RAWs and should have been flagged to the editor.</td><td class="issue"><strong>Specification/Instruction Non-Compliance</strong> — Missed Partner Guidelines</td><td class="source source-QA">QA</td></tr>
 <tr><td class="date">Thu 5/7</td><td>eRep said exterior photos with the removable white roof in place were missing. Truncated booking — both top-down and top-up shots are in the gallery, but other unique shots (with the white top in place) weren&#x27;t flagged for inclusion.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Process">Process</td></tr>
 <tr><td class="date">Thu 5/7</td><td>eRep said photos of spare wheels, parts, paperwork, keys, and a convertible-top-functioning video were missing. The convertible-top video is actually in the gallery; spare parts/keys/docs aren&#x27;t required but were in the RAWs and could have been added as unique shots.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Process">Leadership/Process</td></tr>
 <tr><td class="date">Thu 5/7</td><td>eRep reported that three Zumper virtual-staging images needed a dining table added to the dining room. Living room was staged but the visible kitchen area was left unstaged.</td><td class="issue"><strong>Client Preference</strong> — Virtual Staging Style Mismatch</td><td class="source source-Editor">Editor</td></tr>
 <tr><td class="date">Thu 5/7</td><td>eRep flagged missing individual tire/wheel photos and an exterior walkaround video. Missing videos were flagged and set to GNC-Pass (can be added once PG submits); individual wheel shots are in the final gallery.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-PG">Photographer</td></tr>
-<tr><td class="date">Thu 5/7</td><td>eRep relayed an eCX request to reduce strong contrast and lower saturation. Editing matched the customer&#x27;s previous bookings — they&#x27;re asking for a different visual approach.</td><td class="issue"><strong>Quality Issues</strong> — White Balance/Color</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Thu 5/7</td><td>eRep relayed an eCX request to reduce strong contrast and lower saturation. Editing matched the customer&#x27;s previous bookings — they&#x27;re asking for a different visual approach.</td><td class="issue"><strong>Quality Issues</strong> — White Balance / Color</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Fri 5/8</td><td>PG Jay reported uploading incorrect images and being unable to remove them. PG uploaded incorrect photos for this booking.</td><td class="issue"><strong>Wrong Photos/Videos</strong> — Wrong RAWs Uploaded</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Fri 5/8</td><td>eRep said only 4 subjects were pictured in a session with at least 26 participants. PG only uploaded 14 RAWs (11 usable); this is a No-Touch booking.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Process">Leadership/Process</td></tr>
-<tr><td class="date">Fri 5/8</td><td>PG captured videos in S Log and asked for Rec. 709 colorspace; client also complained about near-grayscale/low-res videos. Client is dissatisfied with the videos, but color edits fall outside their package.</td><td class="issue"><strong>Quality Issues</strong> — White Balance/Color</td><td class="source source-PG">Photographer</td></tr>
+<tr><td class="date">Fri 5/8</td><td>PG captured videos in S Log and asked for Rec. 709 colorspace; client also complained about near-grayscale/low-res videos. Client is dissatisfied with the videos, but color edits fall outside their package.</td><td class="issue"><strong>Quality Issues</strong> — White Balance / Color</td><td class="source source-PG">Photographer</td></tr>
 </tbody></table>
 </section>
 <section class="week">
   <h3>May 11 – May 17</h3>
-  <div class="total-pill">Valid revision requests: <strong>28</strong></div>
+  <div class="pills">
+    <span class="total-pill">Total Disputes: <strong>28</strong></span>
+    <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+  </div>
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
@@ -189,11 +203,11 @@
 <tbody>
 <tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
 <tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">2</td><td class="num">5</td><td class="num">0</td><td class="num">3</td><td class="num">2</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">3</td><td class="num">4</td><td class="num">0</td><td class="num">2</td><td class="num">3</td></tr>
 <tr><td><strong>Quality Issues</strong></td><td class="num">1</td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
 <tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
 <tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">8</td><td class="num">13</td><td class="num">0</td><td class="num">3</td><td class="num">4</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">9</td><td class="num">12</td><td class="num">0</td><td class="num">2</td><td class="num">5</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -201,38 +215,41 @@
 <thead><tr><th style="width:7%">Date</th><th style="width:55%">Customer Dispute</th><th style="width:25%">Issue</th><th style="width:13%">Source</th></tr></thead>
 <tbody>
 <tr><td class="date">Mon 5/11</td><td>eRep said the seller&#x27;s photos of paint damage on the right rear fender weren&#x27;t included in the gallery. Truncated booking — the exterior blemish shots are in the RAWs but aren&#x27;t required.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Process">Process</td></tr>
-<tr><td class="date">Mon 5/11</td><td>eRep flagged that reshoot photos and video for missing assets may not have made it into the gallery. Non-truncated booking; the missing engine bay/startup video (a required shot) was uploaded May 5 before May 9 completion but wasn&#x27;t added to the final gallery.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Mon 5/11</td><td>eRep flagged that reshoot photos and video for missing assets may not have made it into the gallery. Non-truncated booking; the missing engine bay/startup video (a required shot) was uploaded May 5 before May 9 completion but wasn&#x27;t added to the final gallery.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-Process">Process</td></tr>
 <tr><td class="date">Mon 5/11</td><td>eRep flagged gallery isn&#x27;t in compliance with ECG&#x27;s 10–15 image minimum and asked for 3–5 more images. Booking was GNC-passed by Task Force Lead; PG uploaded 11 images but only 7 were usable/unique — PG admitted and will do more in future.</td><td class="issue"><strong>Specification/Instruction Non-Compliance</strong> — Missed Partner Guidelines</td><td class="source source-Process">Leadership/Process</td></tr>
 <tr><td class="date">Mon 5/11</td><td>eRep reported the individual photo for the &quot;General Tso&#x27;s Chicken Combo Platter&quot; was missing — visible in the group image but no dedicated shot. Truncated booking; image is in the RAWs but wasn&#x27;t added to the final gallery.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Process">Process</td></tr>
 <tr><td class="date">Tue 5/12</td><td>eRep said the logo used in the gallery was incorrect. No logo was provided in the admin booking and the issue wasn&#x27;t reported to request the correct one; editor mistakenly associated the client with a similarly-named brand.</td><td class="issue"><strong>Specification/Instruction Non-Compliance</strong> — Missed Special Instructions</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Tue 5/12</td><td>eRep flagged the first four photos of the first provider appeared blurry and didn&#x27;t meet headshot standards. All shots of that subject in the RAWs are blurred; booking was reported for photo quality and EREP instructed to proceed.</td><td class="issue"><strong>Quality Issues</strong> — Resolution/Clarity</td><td class="source source-PG">Photographer</td></tr>
+<tr><td class="date">Tue 5/12</td><td>eRep flagged the first four photos of the first provider appeared blurry and didn&#x27;t meet headshot standards. All shots of that subject in the RAWs are blurred; booking was reported for photo quality and EREP instructed to proceed.</td><td class="issue"><strong>Quality Issues</strong> — Resolution / Clarity</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Tue 5/12</td><td>eRep asked for the videos for Village Bread Cafe to be uploaded, noting the gallery shows 0 complete. CX is requesting upload of videos that exist in the RAW folder.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Tue 5/12</td><td>eRep relayed merchant feedback that header photos may not have been uploaded and that several dishes were shot without required sides (BLT, Breakfast Burrito, etc.). Client wants additional header shots from RAWs included and a reshoot for missing sides — booking shot list confirms multiple dishes were captured without the required sides.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Wed 5/13</td><td>PG had two shoots for the same client and accidentally uploaded the 5/9 photos to the 5/15 booking; requested a transfer. PG uploaded the wrong RAWs — completed gallery is accurate to what was provided.</td><td class="issue"><strong>Wrong Photos/Videos</strong> — Wrong RAWs Uploaded</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Wed 5/13</td><td>Per the photographer, wrong photos were uploaded; correct photos shared via Drive link, and eRep asked for a timeframe to fix. PG uploaded the wrong RAWs for this booking.</td><td class="issue"><strong>Wrong Photos/Videos</strong> — Wrong RAWs Uploaded</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Wed 5/13</td><td>eRep asked whether the gallery had any underside images. RAWs contain no underbody shots, there were no PG notes and no GNC report — QA and editor failed to flag the missing required shot.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-QA">QA</td></tr>
-<tr><td class="date">Wed 5/13</td><td>CX said intentionally-blurry long-exposure shots appear missing from the gallery; PG confirmed all RAWs were uploaded. Editing SOP culls blurred photos, but these were intentional and were requested to be included.</td><td class="issue"><strong>Quality Issues</strong> — Resolution/Clarity</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Wed 5/13</td><td>CX said intentionally-blurry long-exposure shots appear missing from the gallery; PG confirmed all RAWs were uploaded. Editing SOP culls blurred photos, but these were intentional and were requested to be included.</td><td class="issue"><strong>Quality Issues</strong> — Resolution / Clarity</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Thu 5/14</td><td>PG shared correct photos via Dropbox link. PG hit a RAW upload issue and originally sent a wrong Drive link in the Slack thread.</td><td class="issue"><strong>Wrong Photos/Videos</strong> — Wrong RAWs Uploaded</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Thu 5/14</td><td>eRep said seller&#x27;s requested shots of wheels, engine bay, underside, and rear suspension/wheel area didn&#x27;t make it into the gallery. The key wasn&#x27;t in the RAWs (and isn&#x27;t required); other requested shots aren&#x27;t in the gallery.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Thu 5/14</td><td>eRep reported photos for units 424 &amp; 419 were mixed up — uploaded photos are actually for units 408 and 451, which belong to a different job. PG uploaded the wrong RAWs in admin and the booking was mixed with another.</td><td class="issue"><strong>Wrong Photos/Videos</strong> — Wrong RAWs Uploaded</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Thu 5/14</td><td>eRep said retake PWM milk images and the full line of Fox Bros. cheeses didn&#x27;t appear uploaded. All items in the RAW file are in the submitted gallery; nothing is missing.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Thu 5/14</td><td>eRep said retake PWM milk images and Fox Bros. cheese line appear missing from uploads (second Instacart booking). All RAW items are in the submitted gallery; nothing is missing.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-PG">Photographer</td></tr>
-<tr><td class="date">Thu 5/14</td><td>eRep said Combo item photos are unusable due to tight framing — fries are cropped out, leaving only the burger visible. No-Touch booking; framing could be improved by adding negative space top and bottom.</td><td class="issue"><strong>Quality Issues</strong> — Cropping/Straightening/Distortion/Angles</td><td class="source source-Process">Leadership/Process</td></tr>
+<tr><td class="date">Thu 5/14</td><td>eRep said Combo item photos are unusable due to tight framing — fries are cropped out, leaving only the burger visible. No-Touch booking; framing could be improved by adding negative space top and bottom.</td><td class="issue"><strong>Quality Issues</strong> — Cropping / Straightening / Distortion / Angles</td><td class="source source-Process">Leadership/Process</td></tr>
 <tr><td class="date">Thu 5/14</td><td>Client requested low-resolution versions of the images (1,000–2,000 KB). Client is requesting low-res versions of images.</td><td class="issue"><strong>Client Preference</strong> — Client Technical Specification Revision</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Thu 5/14</td><td>Photographer sent a WeTransfer link with an additional photo and asked for a version of shot 40 with the flowers removed. PG submitted an extra image and requested flower removal.</td><td class="issue"><strong>Client Preference</strong> — Advanced Edits</td><td class="source source-PG">Photographer</td></tr>
-<tr><td class="date">Fri 5/15</td><td>CX said night-shoot photos appear overly brightened and lost their natural nighttime ambiance. White balance passes Snappr Standards; client prefers a moodier edit that preserves the nighttime atmosphere.</td><td class="issue"><strong>Quality Issues</strong> — Brightness/Exposure</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Fri 5/15</td><td>eRep asked to slightly reduce contrast, lower shadows, and keep the look consistent across the batch. GYG-provided filters were used in editing; client is requesting minor quality adjustments.</td><td class="issue"><strong>Quality Issues</strong> — Brightness/Exposure</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Fri 5/15</td><td>eRep asked to warm up the color temperature since the edits came back too cold. GYG-provided filters were used in editing; client is requesting minor quality adjustments.</td><td class="issue"><strong>Quality Issues</strong> — White Balance/Color</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Fri 5/15</td><td>CX said night-shoot photos appear overly brightened and lost their natural nighttime ambiance. White balance passes Snappr Standards; client prefers a moodier edit that preserves the nighttime atmosphere.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Fri 5/15</td><td>eRep asked to slightly reduce contrast, lower shadows, and keep the look consistent across the batch. GYG-provided filters were used in editing; client is requesting minor quality adjustments.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Fri 5/15</td><td>eRep asked to warm up the color temperature since the edits came back too cold. GYG-provided filters were used in editing; client is requesting minor quality adjustments.</td><td class="issue"><strong>Quality Issues</strong> — White Balance / Color</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Fri 5/15</td><td>eRep asked whether an interior video was available for this booking. QA missed reporting the missing required interior video.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-QA">QA</td></tr>
 <tr><td class="date">Fri 5/15</td><td>eRep said the seller wants more wide-angle exterior shots taken away from the garage doors. All walk-around shots comply with cropping requirements; client wants wider framing than what&#x27;s in the gallery.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Fri 5/15</td><td>eRep praised the caution-tape removal but asked for orange traffic cones to be removed from the same photos. Client is requesting additional object removal across other images.</td><td class="issue"><strong>Client Preference</strong> — Advanced Edits</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Fri 5/15</td><td>CX complained about the edits, especially combos and black boxes, calling them unusable. Client requested another editing pass to better match expectations, but no special instructions or reference images were provided on the booking.</td><td class="issue"><strong>Expectation Mismatch</strong> — Unmet Expectations</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Sat 5/16</td><td>eCX requested additional underbody photos taken from the front, beneath the motor, that they believe were captured. Completed gallery already includes underbody shots; client is asking for additional ones.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Sat 5/16</td><td>eCX requested additional underbody photos taken from the front, beneath the motor, that they believe were captured. Completed gallery already includes underbody shots; client is asking for additional ones.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-PG">Photographer</td></tr>
 </tbody></table>
 </section>
 <section class="week">
   <h3>May 18 – May 24</h3>
-  <div class="total-pill">Valid revision requests: <strong>21</strong></div>
+  <div class="pills">
+    <span class="total-pill">Total Disputes: <strong>21</strong></span>
+    <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+  </div>
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
@@ -241,9 +258,9 @@
 <tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">8</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
 <tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
 <tr><td><strong>Missing Photos/Videos</strong></td><td class="num">3</td><td class="num">0</td><td class="num">2</td><td class="num">2</td><td class="num">2</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
 <tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">9</td><td class="num">3</td><td class="num">3</td><td class="num">2</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">9</td><td class="num">4</td><td class="num">2</td><td class="num">2</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -265,7 +282,7 @@
 <tr><td class="date">Wed 5/20</td><td>eRep noted underside photos were missing. PG didn&#x27;t provide underbody shots and there were no notes about the missing required shot — both QA and editor failed to flag it.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-QA">QA</td></tr>
 <tr><td class="date">Wed 5/20</td><td>PG requested additional photos be added for this DoorDash booking. Client is requesting additional photos.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Wed 5/20</td><td>eRep relayed a re-edit request to remove backgrounds depicting the customer&#x27;s home and replace with a white studio-like background, keeping the fluffy foreground. Client is requesting an advanced edit (background removal).</td><td class="issue"><strong>Client Preference</strong> — Advanced Edits</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Wed 5/20</td><td>Client disputed the photos and asked to bring down the brightness of the light slightly. Gallery passed QA, but masking and pulling down highlights further would address the client&#x27;s concern.</td><td class="issue"><strong>Quality Issues</strong> — Brightness/Exposure</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Wed 5/20</td><td>Client disputed the photos and asked to bring down the brightness of the light slightly. Gallery passed QA, but masking and pulling down highlights further would address the client&#x27;s concern.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Editor">Editor</td></tr>
 <tr><td class="date">Thu 5/21</td><td>eRep said the client expected a Convertible Top Operation video that wasn&#x27;t in the booking. The video isn&#x27;t in the RAW files.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Thu 5/21</td><td>CX said the photos exceed their website&#x27;s 2MB file-size limit (200–300KB ideal) and asked for both high-res and web-sized versions, or just web-sized. Client wants the files re-exported at a lower file size.</td><td class="issue"><strong>Client Preference</strong> — Client Technical Specification Revision</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Thu 5/21</td><td>CX said the photos exceed their website&#x27;s 2MB file-size limit (200–300KB ideal) and asked for both high-res and web-sized versions, or just web-sized. Client wants the files re-exported at a lower file size.</td><td class="issue"><strong>Client Preference</strong> — Client Technical Specification Revision</td><td class="source source-Customer">Customer</td></tr>
@@ -275,7 +292,10 @@
 </section>
 <section class="week">
   <h3>May 25 – May 31</h3>
-  <div class="total-pill">Valid revision requests: <strong>16</strong></div>
+  <div class="pills">
+    <span class="total-pill">Total Disputes: <strong>16</strong></span>
+    <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+  </div>
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
@@ -293,8 +313,8 @@
   <table class="summary">
 <thead><tr><th style="width:7%">Date</th><th style="width:55%">Customer Dispute</th><th style="width:25%">Issue</th><th style="width:13%">Source</th></tr></thead>
 <tbody>
-<tr><td class="date">Mon 5/25</td><td>PG noted they used a consistent lighting setup and monitored the histogram, but some images came back darker than others, with yellow tint, and a few showed backdrop clamps in frame. White balance and exposure are inconsistent throughout the gallery — this is a spec-check booking only.</td><td class="issue"><strong>Quality Issues</strong> — Brightness/Exposure</td><td class="source source-Editor">Editor</td></tr>
-<tr><td class="date">Tue 5/26</td><td>eRep relayed that the edited photos came back quite cold and asked to warm up the color temperature. Tagged as customer preference — the submitted gallery already appears warm enough and follows the client&#x27;s usual editing style.</td><td class="issue"><strong>Quality Issues</strong> — White Balance/Color</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Mon 5/25</td><td>PG noted they used a consistent lighting setup and monitored the histogram, but some images came back darker than others, with yellow tint, and a few showed backdrop clamps in frame. White balance and exposure are inconsistent throughout the gallery — this is a spec-check booking only.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Editor">Editor</td></tr>
+<tr><td class="date">Tue 5/26</td><td>eRep relayed that the edited photos came back quite cold and asked to warm up the color temperature. Tagged as customer preference — the submitted gallery already appears warm enough and follows the client&#x27;s usual editing style.</td><td class="issue"><strong>Quality Issues</strong> — White Balance / Color</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Tue 5/26</td><td>eRep said the gallery was delivered with only 1 underside photo and asked whether more were available. The RAW folder only contains one underbody shot.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Tue 5/26</td><td>eRep said the seller expected photos of a pair of motorcycles being sold together, but only one bike appears in the gallery. No notes from the client or PG indicated two bikes; the RAW files only show one bike, which is what was edited and submitted.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Tue 5/26</td><td>eRep said the seller reported photos were taken showing seats with covers removed but weren&#x27;t included in the gallery. The RAW files do not show any front seat shots without the cover.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-Customer">Customer</td></tr>
@@ -306,14 +326,17 @@
 <tr><td class="date">Thu 5/28</td><td>PG requested additional photos be added. PG submitted additional photos.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Thu 5/28</td><td>eRep said an odometer photo displaying total mileage (~19k miles) was missing. Truncated booking; the one available odometer shot is unclear and should have been flagged, but the truncated process limits deeper investigation — considered out of scope.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-Process">Process</td></tr>
 <tr><td class="date">Thu 5/28</td><td>eRep said a video showing the car raising and lowering on its suspension was missing. No such video exists in the RAW files; all PG-provided videos are already in the gallery.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-PG">Photographer</td></tr>
-<tr><td class="date">Thu 5/28</td><td>Customer asked for another review of a May 22 real estate shoot, noting light fixtures appeared overly bright and washed out the fixture details. Photos still appear overly bright after review; additional highlight reduction could have helped, and the shoot was tagged as real estate when client expectations were product-focused — process needs calibration.</td><td class="issue"><strong>Quality Issues</strong> — Brightness/Exposure</td><td class="source source-Editor">Editor</td></tr>
+<tr><td class="date">Thu 5/28</td><td>Customer asked for another review of a May 22 real estate shoot, noting light fixtures appeared overly bright and washed out the fixture details. Photos still appear overly bright after review; additional highlight reduction could have helped, and the shoot was tagged as real estate when client expectations were product-focused — process needs calibration.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Editor">Editor</td></tr>
 <tr><td class="date">Thu 5/28</td><td>eRep reported underside photos were missing. RAW files contained no underside/underbody photos; the missing required shots also weren&#x27;t included in the report and should have been flagged.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-QA">QA</td></tr>
-<tr><td class="date">Thu 5/28</td><td>eRep said the gallery looks squashed, as if resized to 3:2 rather than cropped to 3:2. After revisiting the RAW files, the photos don&#x27;t appear distorted compared to the submitted images.</td><td class="issue"><strong>Quality Issues</strong> — Cropping/Straightening/Distortion/Angles</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Thu 5/28</td><td>eRep said the gallery looks squashed, as if resized to 3:2 rather than cropped to 3:2. After revisiting the RAW files, the photos don&#x27;t appear distorted compared to the submitted images.</td><td class="issue"><strong>Quality Issues</strong> — Cropping / Straightening / Distortion / Angles</td><td class="source source-QA">QA</td></tr>
 </tbody></table>
-</section></div><div class="tab-pane" id="tab-june"><div class="month-summary"><span>Total for June:</span> <strong>41</strong> valid revision requests across 3 weeks</div>
+</section></div><div class="tab-pane" id="tab-june"><div class="month-summary"><span>Total for June:</span> <strong>63</strong> total disputes (<strong>6</strong> Snappr QA at fault) across 4 weeks</div>
 <section class="week">
   <h3>Jun 1 – Jun 7</h3>
-  <div class="total-pill">Valid revision requests: <strong>13</strong></div>
+  <div class="pills">
+    <span class="total-pill">Total Disputes: <strong>13</strong></span>
+    <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+  </div>
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
@@ -321,10 +344,10 @@
 <tbody>
 <tr><td><strong>Client Preference</strong></td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
 <tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">1</td><td class="num">1</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
 <tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
 <tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">2</td><td class="num">2</td><td class="num">3</td><td class="num">2</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">3</td><td class="num">2</td><td class="num">2</td><td class="num">2</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -338,7 +361,7 @@
 <tr><td class="date">Wed 6/3</td><td>eRep noted missing walk-around photos with the soft top up. Required convertible walk-arounds are in the gallery, but additional soft-top walk-arounds were available in the RAWs; missed during QA since the booking was truncated and required shots were complete.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Process">Process</td></tr>
 <tr><td class="date">Wed 6/3</td><td>eRep requested renaming Unit 177 photos to 177-102, 177-108, 177-109. QA missed flagging incorrect unit numbers from sub1.</td><td class="issue"><strong>Specification/Instruction Non-Compliance</strong> — Missed Partner Guidelines</td><td class="source source-QA">QA</td></tr>
 <tr><td class="date">Wed 6/3</td><td>CX flagged that composition and framing don&#x27;t effectively showcase the property — beds and sofa aren&#x27;t fully captured and many photos have excessive ceiling space. Framing reflects the RAW files; tighter cropping wasn&#x27;t applied without specific instructions.</td><td class="issue"><strong>Client Preference</strong> — Visual Style/Preference</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Thu 6/4</td><td>eRep relayed that the seller is unhappy with how the photos came back &quot;bleached out.&quot; Quality is inconsistent on review — some photos are overexposed, washing out detail.</td><td class="issue"><strong>Quality Issues</strong> — Brightness/Exposure</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Thu 6/4</td><td>eRep relayed that the seller is unhappy with how the photos came back &quot;bleached out.&quot; Quality is inconsistent on review — some photos are overexposed, washing out detail.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Thu 6/4</td><td>PG uploaded an incorrect RAW file and shared a SwissTransfer link with the correct photos. PG uploaded the wrong RAW file on admin.</td><td class="issue"><strong>Wrong Photos/Videos</strong> — Wrong RAWs Uploaded</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Fri 6/5</td><td>eRep said the client noted the PG took an additional video of headlight cover operation. PG did not upload any video of headlight cover operation in the RAW file.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Fri 6/5</td><td>eRep said the customer noted the PG took photos of engine block numbers that don&#x27;t appear in the gallery. All required shots are present; no engine block number photos were in the RAW file.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-PG">Photographer</td></tr>
@@ -348,7 +371,10 @@
 </section>
 <section class="week">
   <h3>Jun 8 – Jun 14</h3>
-  <div class="total-pill">Valid revision requests: <strong>20</strong></div>
+  <div class="pills">
+    <span class="total-pill">Total Disputes: <strong>20</strong></span>
+    <span class="qa-pill">Snappr QA at fault: <strong>1</strong></span>
+  </div>
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
@@ -375,8 +401,8 @@
 <tr><td class="date">Tue 6/9</td><td>eRep asked whether additional photos taken during the shoot could be provided since the client wasn&#x27;t happy with the gallery selection. Culled files in the RAW folder consist only of duplicate shots.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Tue 6/9</td><td>PG uploaded photos from a different shoot to clear out upload notifications; eRep asked for the gallery to be removed since the booking is being rescheduled. PG uploaded incorrect photos for this booking.</td><td class="issue"><strong>Wrong Photos/Videos</strong> — Wrong RAWs Uploaded</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Tue 6/9</td><td>eRep asked whether the photographer included other images for Aspen Dental — client remembers fun outtakes with a tooth model. All unique shots have already been uploaded, including providers holding the tooth models.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Tue 6/9</td><td>Client complained faces looked too bright as if a camera was pointed at the faces and asked for reduced highlights. Exposure looks even on review, highlights aren&#x27;t too bright, and skin texture is still visible.</td><td class="issue"><strong>Quality Issues</strong> — Brightness/Exposure</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Tue 6/9</td><td>Client said the items in DoorDash shots are cut off (wants full plate rim visible and centered) and the photos are too bright (wants tone darkened by ~15%). Truncated and spec-check booking; quality was bypassed.</td><td class="issue"><strong>Quality Issues</strong> — Cropping/Straightening/Distortion/Angles</td><td class="source source-Process">Process</td></tr>
+<tr><td class="date">Tue 6/9</td><td>Client complained faces looked too bright as if a camera was pointed at the faces and asked for reduced highlights. Exposure looks even on review, highlights aren&#x27;t too bright, and skin texture is still visible.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Tue 6/9</td><td>Client said the items in DoorDash shots are cut off (wants full plate rim visible and centered) and the photos are too bright (wants tone darkened by ~15%). Truncated and spec-check booking; quality was bypassed.</td><td class="issue"><strong>Quality Issues</strong> — Cropping / Straightening / Distortion / Angles</td><td class="source source-Process">Process</td></tr>
 <tr><td class="date">Wed 6/10</td><td>PG noted editors didn&#x27;t apply noise reduction and exterior photos shot close to dark are very grainy; BaT also wasn&#x27;t happy and PG offered their own edits. Noise isn&#x27;t very noticeable unless zoomed in closely and doesn&#x27;t affect the majority of the gallery.</td><td class="issue"><strong>Client Preference</strong> — Visual Style/Preference</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Wed 6/10</td><td>eRep flagged a missing driver-side front seat overview and exterior rear 3/4 views from both sides, and asked about additional underside shots with better focus. The missing exterior wasn&#x27;t flagged because walk-around shots met the 6-shot minimum, and one front seat shot was available.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Wed 6/10</td><td>eRep said the client noted the photographer took an additional close-up video of the exhaust pipe at start-up. Only one startup video exists, with a quick pan to the pipe before start-up — no other separate pipe videos in the RAWs.</td><td class="issue"><strong>Expectation Mismatch</strong> — Unmet Expectations</td><td class="source source-Customer">Customer</td></tr>
@@ -384,25 +410,28 @@
 <tr><td class="date">Thu 6/11</td><td>eRep relayed that the customer says the PG took photos of the Owner&#x27;s Manual, Audi Brochures, and Radio that don&#x27;t appear in the gallery. All required shots are uploaded; PG did not upload any of these items in the RAW file.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Thu 6/11</td><td>eRep said the seller noted photos of documents and records were taken but not included in the final gallery. All required shots are uploaded, but the editor failed to include this unique shot.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Editor">Editor</td></tr>
 <tr><td class="date">Fri 6/12</td><td>eRep said a Swire Coca-Cola account (Super Mario&#x27;s) is requesting a different logo be used on their POS gallery and attached the correct logo. CX is requesting a different logo be used.</td><td class="issue"><strong>Client Preference</strong> — Client Photo Addition/Replacement</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Fri 6/12</td><td>eRep flagged that videos in the gallery appear to be audio-only and won&#x27;t play on most devices, and asked for correct video files urgently. Editor didn&#x27;t properly fix the videos and QA missed the quality issue, likely because this was already the third submission.</td><td class="issue"><strong>Quality Issues</strong> — Video Audio/Stability</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Fri 6/12</td><td>eRep flagged that videos in the gallery appear to be audio-only and won&#x27;t play on most devices, and asked for correct video files urgently. Editor didn&#x27;t properly fix the videos and QA missed the quality issue, likely because this was already the third submission.</td><td class="issue"><strong>Quality Issues</strong> — Video Audio / Stability</td><td class="source source-QA">QA</td></tr>
 <tr><td class="date">Fri 6/12</td><td>eRep said the seller noted photos of a removed hardtop were taken but not included. No hard-top-off photos were provided in the RAWs; these also aren&#x27;t required, so the gallery wasn&#x27;t flagged.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Fri 6/12</td><td>Self-service client asked for all RAW files uploaded by the photographer to be added to the gallery. Remaining RAW photos are duplicate shots that were culled during editing.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
 </tbody></table>
 </section>
 <section class="week">
   <h3>Jun 15 – Jun 21</h3>
-  <div class="total-pill">Valid revision requests: <strong>8</strong></div>
+  <div class="pills">
+    <span class="total-pill">Total Disputes: <strong>8</strong></span>
+    <span class="qa-pill">Snappr QA at fault: <strong>1</strong></span>
+  </div>
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
 <thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
 <tbody>
 <tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td></tr>
 <tr><td><strong>Others</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
 <tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
 <tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">3</td><td class="num">2</td><td class="num">1</td><td class="num">2</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">3</td><td class="num">2</td><td class="num">1</td><td class="num">1</td><td class="num">1</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -410,13 +439,60 @@
 <thead><tr><th style="width:7%">Date</th><th style="width:55%">Customer Dispute</th><th style="width:25%">Issue</th><th style="width:13%">Source</th></tr></thead>
 <tbody>
 <tr><td class="date">Wed 6/17</td><td>eRep flagged that the straight-on full engine shot in the gallery is from a different vehicle. The uploaded straight-on engine shot was not found in the RAW folder — the full-view engine photo was sourced from a different vehicle.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-Editor">Editor</td></tr>
-<tr><td class="date">Wed 6/17</td><td>eRep relayed that the seller said the photographer took undercarriage shots but they weren&#x27;t uploaded. QA missed flagging the missing underbody shots (required for this client); multiple underbody photos were available in the RAW folder and should have been included.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Wed 6/17</td><td>eRep relayed that the seller said the photographer took undercarriage shots but they weren&#x27;t uploaded. QA missed flagging the missing underbody shots (required for this client); multiple underbody photos were available in the RAW folder and should have been included.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-Process">Process</td></tr>
 <tr><td class="date">Thu 6/18</td><td>Client flagged indoor photos for inconsistent skin tones (reddish, uneven), excessive red/warm casts, lighting reflections, and faces with eyes difficult to see, and asked whether revisions could be made. Most issues are in indoor shots where the PG used flash that negatively affected quality — blown-out highlights on faces, reflections on glasses/skin, and uneven shadows in the lower half of many photos.</td><td class="issue"><strong>Client Preference</strong> — Visual Style/Preference</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Thu 6/18</td><td>eRep said the gallery only contains headshots and group photos with no office interior/exterior or live action shots; no GNC was reported. Per guidelines, facility interior and exterior shots are optional or only required if provided by the photographer — since they&#x27;re not mandatory, the GNC wasn&#x27;t triggered.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-PG">Photographer</td></tr>
-<tr><td class="date">Thu 6/18</td><td>eRep asked editors to re-edit exterior photos to look less blown-out — lower highlights/whites and reduce green saturation (grass looks neon). Walk-around images contain duplicates and white balance is inconsistent — first set has correct white balance but the second set is overexposed.</td><td class="issue"><strong>Quality Issues</strong> — Brightness/Exposure</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Thu 6/18</td><td>eRep asked editors to re-edit exterior photos to look less blown-out — lower highlights/whites and reduce green saturation (grass looks neon). Walk-around images contain duplicates and white balance is inconsistent — first set has correct white balance but the second set is overexposed.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-QA">QA</td></tr>
 <tr><td class="date">Thu 6/18</td><td>PG shared a Drive link with the correct photos for Kingz Kebab. PG uploaded the wrong RAW file.</td><td class="issue"><strong>Wrong Photos/Videos</strong> — Wrong RAWs Uploaded</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Fri 6/19</td><td>Client requested images be resized for Miami MLS compatibility (2048×1536, JPEG, sRGB, under 6MB) — no quality issue, no missing or additional shots. Client is requesting files be resized.</td><td class="issue"><strong>Others</strong> — Client File Request</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Sat 6/20</td><td>PG shared a Drive link with the correct photos for SKIP Michael&#x27;s 30 Mill booking, apologizing for the earlier upload. (Investigation note is blank; Col N indicates Photographer fault.)</td><td class="issue"><strong>Wrong Photos/Videos</strong> — Wrong RAWs Uploaded</td><td class="source source-PG">Photographer</td></tr>
+</tbody></table>
+</section>
+<section class="week">
+  <h3>Jun 22 – Jun 28</h3>
+  <div class="pills">
+    <span class="total-pill">Total Disputes: <strong>22</strong></span>
+    <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+  </div>
+  
+  <h4>Source Breakdown</h4>
+  <table class="breakdown">
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<tbody>
+<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">4</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Expectation Mismatch</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">2</td><td class="num">7</td><td class="num">0</td><td class="num">1</td><td class="num">2</td></tr>
+<tr><td><strong>Others</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">5</td><td class="num">11</td><td class="num">1</td><td class="num">2</td><td class="num">3</td></tr>
+</tbody></table>
+  
+  <h4>Detailed Summary</h4>
+  <table class="summary">
+<thead><tr><th style="width:7%">Date</th><th style="width:55%">Customer Dispute</th><th style="width:25%">Issue</th><th style="width:13%">Source</th></tr></thead>
+<tbody>
+<tr><td class="date">Mon 6/22</td><td>eRep relayed that the customer says the PG took photos of paperwork and title (front and back) that don&#x27;t appear in the gallery. All documents were uploaded and included in the completed gallery.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Mon 6/22</td><td>eRep relayed a request to revise the virtual staging to be more modern/minimalist (less extravagant) and to better match the provided samples. Submitted staging is more extravagant — notably gold-colored furniture and accents — than the samples.</td><td class="issue"><strong>Client Preference</strong> — Visual Style/Preference</td><td class="source source-Editor">Editor</td></tr>
+<tr><td class="date">Mon 6/22</td><td>eRep flagged missing rear-seat photos. PG did not provide a rear-seat overview (a required shot per guidelines); both editor and QA missed flagging it.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Tue 6/23</td><td>eRep asked for the photographer to be sent back to capture top-down beauty shots, calling them the most important photos in the entire gallery. Guideline used for review was the one in the portal rather than the fact-check sheet — original verdict was overturned.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-Process">Leadership/Process</td></tr>
+<tr><td class="date">Tue 6/23</td><td>CX requested the file names be reverted to the PG&#x27;s original naming convention (grade, product name, sequence) for internal filing. Client is requesting the filenames be returned to the raw file names.</td><td class="issue"><strong>Client Preference</strong> — Client Technical Specification Revision</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Tue 6/23</td><td>eRep relayed that the customer says the PG took photos of 7 additional VIN stickers that don&#x27;t appear in the gallery. PG actually provided 3 VIN tags and stickers (12 total tags/stickers) and all are included in the completed gallery.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Wed 6/24</td><td>Client (Emmi from me&amp;u) flagged that several food/drink images (avocado-corn chips, fried chicken, green pea risotto, focaccia, drinks) appear over-saturated and not reflective of how the food looked on the day — she believes the issue arose during editing. Delivered images are within Snappr Standards; edits were not overly saturated as claimed.</td><td class="issue"><strong>Quality Issues</strong> — White Balance / Color</td><td class="source source-PG">Photographer</td></tr>
+<tr><td class="date">Wed 6/24</td><td>Client asked whether additional images from a Chanan Foundation shoot weren&#x27;t initially selected for editing. Client is looking for more images, but all unique shots were already included.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Wed 6/24</td><td>eRep relayed that the seller says the PG took a photo of the dashboard with the cover removed that&#x27;s missing from the gallery. The shot is not a required one and the RAW folder contains no photos of the dashboard without the cover.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Wed 6/24</td><td>Customer reported missing bathroom shots and asked for files to be resized to 3MB. All bathroom shots from the RAW folder are already in the submitted gallery; client is also requesting file resize.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Wed 6/24</td><td>eRep asked whether additional photos matching a specific ad (screenshot provided) exist, since the ad is missing entirely from the gallery. PG only uploaded 22 photos and all are in the completed gallery; none contain the ad shown in the screenshots.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Wed 6/24</td><td>eRep relayed that the seller says a driving video was made during the shoot but wasn&#x27;t included. There&#x27;s no driving video in the RAW file — PG did not upload one.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-PG">Photographer</td></tr>
+<tr><td class="date">Wed 6/24</td><td>Client disputed several units in the gallery, claiming the colors don&#x27;t match adjacent units. Reference samples the client provided show product design and colors that don&#x27;t match the actual shoot — not a proper basis for the dispute.</td><td class="issue"><strong>Expectation Mismatch</strong> — Unmet Expectations</td><td class="source source-PG">Photographer</td></tr>
+<tr><td class="date">Thu 6/25</td><td>Office manager reported that headshots arrived but several office photos taken during the same session are missing. PG did provide 4 interior facility shots; per guidelines, only headshots and group shots are required, so the gallery meets requirements. Tagged &#x27;No QA: Skip QA&#x27; since this partner is currently under No Touch review protocol.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Process">No QA: Skip QA</td></tr>
+<tr><td class="date">Thu 6/25</td><td>eRep reported late delivery — booking is completed but the gallery is empty. PG may have accidentally marked the gallery complete; the RAW folder contained no photos, only videos.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-PG">Photographer</td></tr>
+<tr><td class="date">Thu 6/25</td><td>PG wants to add more photos to the customer&#x27;s gallery (shared via Drive link). PG is requesting additional photos be added.</td><td class="issue"><strong>Others</strong> — Photographer Request</td><td class="source source-PG">Photographer</td></tr>
+<tr><td class="date">Thu 6/25</td><td>Seller said the exposure is washing out the vehicle and asked to reduce it. Gallery does contain overexposed images that can be adjusted; QA failed to notice the quality issue.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Thu 6/25</td><td>eRep flagged missing engine photos. eRep didn&#x27;t specify which engine image they wanted; based on research the engine for this specific vehicle isn&#x27;t accessible, and PG-tagged engine bay images (green box) were already in the initial delivery.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Thu 6/25</td><td>eRep asked whether the photographer has underbody images for this Acura. Underbody shots aren&#x27;t required for this client and all other required shots were delivered.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Thu 6/25</td><td>CX requested filenames be reverted to the PG&#x27;s original naming convention (grade, product name, sequence) for internal filing. No guidelines or notes in the PAYG booking address file naming.</td><td class="issue"><strong>Client Preference</strong> — Client Technical Specification Revision</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Fri 6/26</td><td>eRep flagged inconsistent lighting, contrast, and vibrancy across the photos — some have dark backgrounds, some are light, like they hadn&#x27;t been edited at all. Truncated process; the editor failed to produce quality images.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Process">Process</td></tr>
+<tr><td class="date">Fri 6/26</td><td>Customer requested advanced editing — jawline refinement (subtle masseter reduction ~20%, natural look) and teeth whitening — and asked for a quote per image. Advanced edits aren&#x27;t in the standard editing package; Editing Leadership provided rates and the request is awaiting customer consent.</td><td class="issue"><strong>Client Preference</strong> — Advanced Edits</td><td class="source source-Customer">Customer</td></tr>
 </tbody></table>
 </section></div>
 <script>
