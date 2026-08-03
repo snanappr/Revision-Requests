@@ -36,12 +36,13 @@
   h3 { font-size: 19px; color: #111827; margin: 0 0 8px; padding-bottom: 6px; border-bottom: 1px solid #e5e7eb; }
   h4 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; color: #6b7280; margin: 20px 0 8px; }
   .pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
-  .total-pill, .qa-pill {
+  .total-pill, .qa-pill, .editor-pill {
     display: inline-block; padding: 6px 12px;
     border-radius: 999px; font-size: 13px;
   }
-  .total-pill { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; }
-  .qa-pill { background: #fdf2f8; border: 1px solid #fbcfe8; color: #be185d; }
+  .total-pill  { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; }
+  .qa-pill     { background: #fdf2f8; border: 1px solid #fbcfe8; color: #be185d; }
+  .editor-pill { background: #f5f3ff; border: 1px solid #ddd6fe; color: #7c3aed; }
   table { border-collapse: collapse; width: 100%; font-size: 13.5px; margin-bottom: 4px; }
   th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; vertical-align: top; }
   th { background: #f9fafb; font-weight: 600; color: #374151; font-size: 13px; }
@@ -65,12 +66,13 @@
   <div class="tabs">
     <button class="tab-btn" data-tab="tab-april">April</button><button class="tab-btn" data-tab="tab-may">May</button><button class="tab-btn" data-tab="tab-june">June</button><button class="tab-btn active" data-tab="tab-july">July</button>
   </div>
-  <div class="tab-pane" id="tab-april"><div class="month-summary"><span>Total for April:</span> <strong>17</strong> total disputes (<strong>5</strong> Snappr QA at fault) across 1 week</div>
+  <div class="tab-pane" id="tab-april"><div class="month-summary"><span>Total for April:</span> <strong>17</strong> total disputes (<strong>5</strong> Snappr QA at fault, <strong>0</strong> Editor at fault) across 1 week</div>
 <section class="week">
   <h3>Apr 20 – Apr 26</h3>
   <div class="pills">
     <span class="total-pill">Total Disputes: <strong>17</strong></span>
     <span class="qa-pill">Snappr QA at fault: <strong>5</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>0</strong></span>
   </div>
   
   <h4>Source Breakdown</h4>
@@ -106,12 +108,13 @@
 <tr><td class="date">Sat 4/25</td><td>eRep flagged grainy exterior walkaround photos shot at high ISO. Noise is very apparent (sunset shoot); since the affected images are required shots and couldn&#x27;t be corrected in editing, the gallery should have been flagged.</td><td class="issue"><strong>Quality Issues</strong> — Resolution / Clarity</td><td class="source source-QA">QA</td></tr>
 <tr><td class="date">Sat 4/25</td><td>eRep asked for the group shot to be replaced because one person wasn&#x27;t smiling. PG didn&#x27;t capture an alternative smiling version despite the direction being explicit in the shoot guide.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-PG">Photographer</td></tr>
 </tbody></table>
-</section></div><div class="tab-pane" id="tab-may"><div class="month-summary"><span>Total for May:</span> <strong>98</strong> total disputes (<strong>10</strong> Snappr QA at fault) across 5 weeks</div>
+</section></div><div class="tab-pane" id="tab-may"><div class="month-summary"><span>Total for May:</span> <strong>98</strong> total disputes (<strong>10</strong> Snappr QA at fault, <strong>8</strong> Editor at fault) across 5 weeks</div>
 <section class="week">
   <h3>Apr 27 – May 3</h3>
   <div class="pills">
     <span class="total-pill">Total Disputes: <strong>13</strong></span>
     <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>0</strong></span>
   </div>
   
   <h4>Source Breakdown</h4>
@@ -149,6 +152,7 @@
   <div class="pills">
     <span class="total-pill">Total Disputes: <strong>20</strong></span>
     <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>2</strong></span>
   </div>
   
   <h4>Source Breakdown</h4>
@@ -195,6 +199,7 @@
   <div class="pills">
     <span class="total-pill">Total Disputes: <strong>28</strong></span>
     <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>0</strong></span>
   </div>
   
   <h4>Source Breakdown</h4>
@@ -249,6 +254,7 @@
   <div class="pills">
     <span class="total-pill">Total Disputes: <strong>21</strong></span>
     <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>4</strong></span>
   </div>
   
   <h4>Source Breakdown</h4>
@@ -295,6 +301,7 @@
   <div class="pills">
     <span class="total-pill">Total Disputes: <strong>16</strong></span>
     <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>2</strong></span>
   </div>
   
   <h4>Source Breakdown</h4>
@@ -330,12 +337,13 @@
 <tr><td class="date">Thu 5/28</td><td>eRep reported underside photos were missing. RAW files contained no underside/underbody photos; the missing required shots also weren&#x27;t included in the report and should have been flagged.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-QA">QA</td></tr>
 <tr><td class="date">Thu 5/28</td><td>eRep said the gallery looks squashed, as if resized to 3:2 rather than cropped to 3:2. After revisiting the RAW files, the photos don&#x27;t appear distorted compared to the submitted images.</td><td class="issue"><strong>Quality Issues</strong> — Cropping / Straightening / Distortion / Angles</td><td class="source source-QA">QA</td></tr>
 </tbody></table>
-</section></div><div class="tab-pane" id="tab-june"><div class="month-summary"><span>Total for June:</span> <strong>63</strong> total disputes (<strong>6</strong> Snappr QA at fault) across 4 weeks</div>
+</section></div><div class="tab-pane" id="tab-june"><div class="month-summary"><span>Total for June:</span> <strong>63</strong> total disputes (<strong>6</strong> Snappr QA at fault, <strong>6</strong> Editor at fault) across 4 weeks</div>
 <section class="week">
   <h3>Jun 1 – Jun 7</h3>
   <div class="pills">
     <span class="total-pill">Total Disputes: <strong>13</strong></span>
     <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>2</strong></span>
   </div>
   
   <h4>Source Breakdown</h4>
@@ -374,6 +382,7 @@
   <div class="pills">
     <span class="total-pill">Total Disputes: <strong>20</strong></span>
     <span class="qa-pill">Snappr QA at fault: <strong>1</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>2</strong></span>
   </div>
   
   <h4>Source Breakdown</h4>
@@ -420,6 +429,7 @@
   <div class="pills">
     <span class="total-pill">Total Disputes: <strong>8</strong></span>
     <span class="qa-pill">Snappr QA at fault: <strong>1</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>1</strong></span>
   </div>
   
   <h4>Source Breakdown</h4>
@@ -453,6 +463,7 @@
   <div class="pills">
     <span class="total-pill">Total Disputes: <strong>22</strong></span>
     <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>1</strong></span>
   </div>
   
   <h4>Source Breakdown</h4>
@@ -494,12 +505,13 @@
 <tr><td class="date">Fri 6/26</td><td>eRep flagged inconsistent lighting, contrast, and vibrancy across the photos — some have dark backgrounds, some are light, like they hadn&#x27;t been edited at all. Truncated process; the editor failed to produce quality images.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Process">Process</td></tr>
 <tr><td class="date">Fri 6/26</td><td>Customer requested advanced editing — jawline refinement (subtle masseter reduction ~20%, natural look) and teeth whitening — and asked for a quote per image. Advanced edits aren&#x27;t in the standard editing package; Editing Leadership provided rates and the request is awaiting customer consent.</td><td class="issue"><strong>Client Preference</strong> — Advanced Edits</td><td class="source source-Customer">Customer</td></tr>
 </tbody></table>
-</section></div><div class="tab-pane active" id="tab-july"><div class="month-summary"><span>Total for July:</span> <strong>63</strong> total disputes (<strong>12</strong> Snappr QA at fault) across 4 weeks</div>
+</section></div><div class="tab-pane active" id="tab-july"><div class="month-summary"><span>Total for July:</span> <strong>82</strong> total disputes (<strong>14</strong> Snappr QA at fault, <strong>6</strong> Editor at fault) across 5 weeks</div>
 <section class="week">
   <h3>Jun 29 – Jul 5</h3>
   <div class="pills">
     <span class="total-pill">Total Disputes: <strong>14</strong></span>
     <span class="qa-pill">Snappr QA at fault: <strong>4</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>3</strong></span>
   </div>
   
   <h4>Source Breakdown</h4>
@@ -539,6 +551,7 @@
   <div class="pills">
     <span class="total-pill">Total Disputes: <strong>16</strong></span>
     <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>1</strong></span>
   </div>
   
   <h4>Source Breakdown</h4>
@@ -580,6 +593,7 @@
   <div class="pills">
     <span class="total-pill">Total Disputes: <strong>19</strong></span>
     <span class="qa-pill">Snappr QA at fault: <strong>4</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>1</strong></span>
   </div>
   
   <h4>Source Breakdown</h4>
@@ -624,7 +638,8 @@
   <h3>Jul 20 – Jul 26</h3>
   <div class="pills">
     <span class="total-pill">Total Disputes: <strong>14</strong></span>
-    <span class="qa-pill">Snappr QA at fault: <strong>2</strong></span>
+    <span class="qa-pill">Snappr QA at fault: <strong>1</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>0</strong></span>
   </div>
   
   <h4>Source Breakdown</h4>
@@ -633,16 +648,16 @@
 <tbody>
 <tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
 <tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
 <tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">2</td><td class="num">8</td><td class="num">0</td><td class="num">2</td><td class="num">2</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">3</td><td class="num">8</td><td class="num">0</td><td class="num">1</td><td class="num">2</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
   <table class="summary">
 <thead><tr><th style="width:7%">Date</th><th style="width:55%">Customer Dispute</th><th style="width:25%">Issue</th><th style="width:13%">Source</th></tr></thead>
 <tbody>
-<tr><td class="date">Mon 7/20</td><td>eRep flagged that the 4th video in the gallery (showing the back seats) is a 0.0-second file, and asked if a longer version exists. QA failed to review the video and didn&#x27;t flag the issue during the quality check.</td><td class="issue"><strong>Quality Issues</strong> — Video Audio / Stability</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Mon 7/20</td><td>eRep flagged that the 4th video in the gallery (showing the back seats) is a 0.0-second file, and asked if a longer version exists. QA failed to review the video and didn&#x27;t flag the issue during the quality check.</td><td class="issue"><strong>Quality Issues</strong> — Video Audio / Stability</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Mon 7/20</td><td>eRep asked for a re-edit citing a green tint on most photos and blown-out highlights, with reference images attached. The green tint is caused by dappled reflections from the shoot environment; per guidelines, dappled shadows and reflections aren&#x27;t reportable issues.</td><td class="issue"><strong>Client Preference</strong> — Visual Style/Preference</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Mon 7/20</td><td>eRep said 1 of 3 bathrooms wasn&#x27;t captured and asked to check the submitted files. Missing rooms weren&#x27;t reported by the PG, and there was no indication in the booking details or notes that the property had three bathrooms.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Mon 7/20</td><td>eRep said only 1 photo was delivered — PG shared all RAWs via Google Drive when a GNC was reported. Completed gallery contains only 1 photo even though the PG provided 9; missed by QA due to the truncated review process.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Process">Process</td></tr>
@@ -656,6 +671,51 @@
 <tr><td class="date">Wed 7/22</td><td>Client wants a specific photo&#x27;s editing style to match the rest of their gallery. The sample they provided appears darker, emphasizing ambient lighting, while Snappr standard focuses on white balance.</td><td class="issue"><strong>Client Preference</strong> — Visual Style/Preference</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Wed 7/22</td><td>PG uploaded incorrect photos for this Ionna booking; correct photos shared via a Drive link with a request to reupload ASAP. PG uploaded the wrong images.</td><td class="issue"><strong>Wrong Photos/Videos</strong> — Wrong RAWs Uploaded</td><td class="source source-PG">Photographer</td></tr>
 <tr><td class="date">Fri 7/24</td><td>eRep said the customer wasn&#x27;t satisfied with exterior walk-around photos due to background distractions and requested a walk-around reshoot. GNC report only flagged a missing shot (not the walk-around photos); background clean-up is out of scope.</td><td class="issue"><strong>Client Preference</strong> — Visual Style/Preference</td><td class="source source-Customer">Customer</td></tr>
+</tbody></table>
+</section>
+<section class="week">
+  <h3>Jul 27 – Aug 2</h3>
+  <div class="pills">
+    <span class="total-pill">Total Disputes: <strong>19</strong></span>
+    <span class="qa-pill">Snappr QA at fault: <strong>3</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>1</strong></span>
+  </div>
+  
+  <h4>Source Breakdown</h4>
+  <table class="breakdown">
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<tbody>
+<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">2</td></tr>
+<tr><td><strong>Expectation Mismatch</strong></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">2</td><td class="num">1</td><td class="num">2</td><td class="num">3</td></tr>
+<tr><td><strong>Others</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
+<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">1</td><td class="num">8</td><td class="num">1</td><td class="num">3</td><td class="num">6</td></tr>
+</tbody></table>
+  
+  <h4>Detailed Summary</h4>
+  <table class="summary">
+<thead><tr><th style="width:7%">Date</th><th style="width:55%">Customer Dispute</th><th style="width:25%">Issue</th><th style="width:13%">Source</th></tr></thead>
+<tbody>
+<tr><td class="date">Mon 7/27</td><td>PG reached out about a missing photo the CX specifically requested — &#x27;usman&#x27;s_party_20260725_14&#x27; — asking to check the RAW photos and upload it. No PG notes or comments in admin about the special request; several culled RAW files could have been included, but unclear if any were the specific images the client referenced.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Process">Leadership/Process</td></tr>
+<tr><td class="date">Tue 7/28</td><td>CX said photos look too desaturated and have too much white, making the quality look dull. Submitted photos are color-accurate; some images have slightly bright highlights but white balance is consistent and matches the original bracketed RAW shots.</td><td class="issue"><strong>Client Preference</strong> — Visual Style/Preference</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Tue 7/28</td><td>CX asked for the head-to-toe photo of the model wearing a green skirt in the living room to be included in the final gallery. The requested photo is already in the completed gallery.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Tue 7/28</td><td>eRep flagged that 3 files in the video gallery don&#x27;t play as videos and asked to prioritize the fix. Missing engine photos and video were flagged, but PG couldn&#x27;t open the hood and thus couldn&#x27;t capture the required engine shots/video — reviewed and approved by eRep.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Tue 7/28</td><td>eRep said most of the delivered photos don&#x27;t have the truck (the intended subject) in frame — many are of people crossing the street. The truck with advertisements is already in the submitted gallery; photos of people crossing were included per guidelines requiring all unique shots to be delivered (only blurry/duplicate photos culled).</td><td class="issue"><strong>Expectation Mismatch</strong> — Unmet Expectations</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Tue 7/28</td><td>Client requested revisions — HDR stack, correct white balance, increased clarity/sharpness, exposure/highlights/shadows adjustments — with reference samples in a Drive link. Edits meet Snappr standard; client is requesting additional adjustments based on personal preference.</td><td class="issue"><strong>Client Preference</strong> — Visual Style/Preference</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Wed 7/29</td><td>Master bathroom and master closet photos are missing; PG confirmed RAW files were uploaded. Additional bathroom and closet photos exist in the RAWs but weren&#x27;t included in the completed gallery; also not mentioned in the submission or requested to be added.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-Process">Leadership/Process</td></tr>
+<tr><td class="date">Wed 7/29</td><td>eRep said the gallery was delivered without engine or engine bay photos. This model of car doesn&#x27;t have a visible engine based on its design.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Wed 7/29</td><td>eRep said the gallery was delivered without an exterior walkaround video. No walk-around video was in the RAWs; both QA and editor failed to flag the missing required video.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Wed 7/29</td><td>eRep said Melba&#x27;s has missing photos and asked to check if all dish photos were delivered. Truncated process.</td><td class="issue"><strong>Client Preference</strong> — Client Photo Addition/Replacement</td><td class="source source-Process">Process</td></tr>
+<tr><td class="date">Wed 7/29</td><td>PG uploaded 5 images but only 4 were delivered; eRep looking for the missing photo. Truncated process.</td><td class="issue"><strong>Client Preference</strong> — Client Photo Addition/Replacement</td><td class="source source-Process">Process</td></tr>
+<tr><td class="date">Thu 7/30</td><td>PG relayed customer&#x27;s specific request for photos taken from both driver and passenger sides with both doors open — the two photos were uploaded but aren&#x27;t in the released gallery. Specific request wasn&#x27;t in the shoot/booking details; photos are in the RAWs and while not required, editor could have included them as unique shots.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Editor">Editor</td></tr>
+<tr><td class="date">Thu 7/30</td><td>Client reported missing photos of the half bath and bedroom closet. No photos of the bedroom closet or additional bathroom in the RAWs; all unique shots provided by the PG were edited and included in the gallery.</td><td class="issue"><strong>Expectation Mismatch</strong> — Unmet Expectations</td><td class="source source-PG">Photographer</td></tr>
+<tr><td class="date">Thu 7/30</td><td>eRep said there was a trail shot at the beginning of the Muir Woods shoot that isn&#x27;t in the gallery. RAWs contain a couple of full-view trail shots that weren&#x27;t included in the submitted gallery.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Thu 7/30</td><td>eRep asked whether all unique shots were delivered. All dishes captured by the PG were included in the completed gallery.</td><td class="issue"><strong>Others</strong> — AM Verification</td><td class="source source-Process">No QA: Skip QA</td></tr>
+<tr><td class="date">Thu 7/30</td><td>Photos were uploaded to the wrong bookings — one booking&#x27;s gallery has the photos for another, and vice versa. QA failed to verify whether PG-uploaded photos were correct since the shoot name didn&#x27;t match the file names — should have been clarified with the PG before proceeding.</td><td class="issue"><strong>Wrong Photos/Videos</strong> — Wrong RAWs Uploaded</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Thu 7/30</td><td>eRep said the gallery is missing some photos; merchant confirmed all items were made and photographed. Truncated process.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Process">Process</td></tr>
+<tr><td class="date">Fri 7/31</td><td>eRep said 5 of 10 VIN sticker photos are missing (there should be 10 individual photos). Completed gallery already includes VIN photos; client is requesting additional VIN shots that are available in the RAW files.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Fri 7/31</td><td>Customer wants boxes photoshopped out of front desk photos, crumpled paper covering an exam table, dishes in the sink, and leaves on carpet removed — requested a quote to review. Advanced edits are not included in the basic editing package.</td><td class="issue"><strong>Client Preference</strong> — Advanced Edits</td><td class="source source-Customer">Customer</td></tr>
 </tbody></table>
 </section></div>
 <script>
