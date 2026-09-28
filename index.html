@@ -12,7 +12,7 @@
   }
   h1 { font-size: 28px; margin: 0 0 4px; color: #111827; }
   .meta { color: #6b7280; font-size: 14px; margin-bottom: 24px; }
-  .tabs { display: flex; gap: 4px; border-bottom: 2px solid #e5e7eb; }
+  .tabs { display: flex; gap: 4px; border-bottom: 2px solid #e5e7eb; flex-wrap: wrap; }
   .tab-btn {
     background: transparent; border: 1px solid transparent; border-bottom: none;
     padding: 10px 20px; cursor: pointer; font-size: 15px; font-weight: 500;
@@ -57,7 +57,8 @@
   .source-Editor { color: #7c3aed; }
   .source-QA { color: #be185d; }
   .source-Process { color: #1d4ed8; }
-  table.breakdown { max-width: 640px; }
+  .source-Disputed { color: #6b7280; }
+  table.breakdown { max-width: 720px; }
 </style>
 </head>
 <body>
@@ -77,13 +78,13 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
-<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">2</td><td class="num">2</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">3</td><td class="num">1</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">4</td><td class="num">0</td><td class="num">5</td><td class="num">4</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">2</td><td class="num">2</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">3</td><td class="num">1</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">4</td><td class="num">0</td><td class="num">5</td><td class="num">4</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -119,13 +120,13 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">1</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">1</td><td class="num">7</td><td class="num">0</td><td class="num">2</td><td class="num">3</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">1</td><td class="num">7</td><td class="num">0</td><td class="num">2</td><td class="num">3</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -157,15 +158,15 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">1</td></tr>
-<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">3</td><td class="num">1</td><td class="num">1</td><td class="num">2</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">6</td><td class="num">5</td><td class="num">3</td><td class="num">2</td><td class="num">4</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">3</td><td class="num">1</td><td class="num">1</td><td class="num">2</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">6</td><td class="num">5</td><td class="num">3</td><td class="num">2</td><td class="num">4</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -204,15 +205,15 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">3</td><td class="num">4</td><td class="num">0</td><td class="num">2</td><td class="num">3</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">1</td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
-<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
-<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">9</td><td class="num">12</td><td class="num">0</td><td class="num">2</td><td class="num">5</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">3</td><td class="num">4</td><td class="num">0</td><td class="num">2</td><td class="num">3</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">1</td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">9</td><td class="num">12</td><td class="num">0</td><td class="num">2</td><td class="num">5</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -259,14 +260,14 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">8</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">3</td><td class="num">0</td><td class="num">3</td><td class="num">2</td><td class="num">1</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">9</td><td class="num">5</td><td class="num">2</td><td class="num">1</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">8</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">3</td><td class="num">0</td><td class="num">3</td><td class="num">2</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">9</td><td class="num">5</td><td class="num">2</td><td class="num">1</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -306,14 +307,14 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">1</td></tr>
-<tr><td><strong>Others</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">2</td><td class="num">1</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">7</td><td class="num">2</td><td class="num">2</td><td class="num">1</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Others</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">7</td><td class="num">2</td><td class="num">2</td><td class="num">1</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -348,14 +349,14 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">1</td><td class="num">1</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">3</td><td class="num">2</td><td class="num">2</td><td class="num">2</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">3</td><td class="num">2</td><td class="num">2</td><td class="num">2</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -387,15 +388,15 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">6</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">3</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Others</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">1</td></tr>
-<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">12</td><td class="num">2</td><td class="num">1</td><td class="num">1</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">6</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">3</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Others</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">12</td><td class="num">2</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -434,14 +435,14 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td></tr>
-<tr><td><strong>Others</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">3</td><td class="num">2</td><td class="num">1</td><td class="num">1</td><td class="num">1</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Others</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">3</td><td class="num">2</td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -468,14 +469,14 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">4</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Expectation Mismatch</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">2</td><td class="num">7</td><td class="num">0</td><td class="num">1</td><td class="num">2</td></tr>
-<tr><td><strong>Others</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">5</td><td class="num">11</td><td class="num">1</td><td class="num">2</td><td class="num">3</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">4</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Expectation Mismatch</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">2</td><td class="num">7</td><td class="num">0</td><td class="num">1</td><td class="num">2</td><td class="num">0</td></tr>
+<tr><td><strong>Others</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">5</td><td class="num">11</td><td class="num">1</td><td class="num">2</td><td class="num">3</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -516,14 +517,14 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">2</td><td class="num">2</td><td class="num">3</td><td class="num">1</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">2</td><td class="num">4</td><td class="num">3</td><td class="num">4</td><td class="num">1</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">2</td><td class="num">2</td><td class="num">3</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">2</td><td class="num">4</td><td class="num">3</td><td class="num">4</td><td class="num">1</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -556,14 +557,14 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num">2</td></tr>
-<tr><td><strong>Others</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">1</td></tr>
-<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">6</td><td class="num">1</td><td class="num">2</td><td class="num">3</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0</td></tr>
+<tr><td><strong>Others</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">4</td><td class="num">6</td><td class="num">1</td><td class="num">2</td><td class="num">3</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -598,15 +599,15 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">8</td><td class="num">1</td><td class="num">0</td><td class="num">2</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">0</td></tr>
-<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">1</td><td class="num">10</td><td class="num">1</td><td class="num">4</td><td class="num">3</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">8</td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">1</td><td class="num">10</td><td class="num">1</td><td class="num">4</td><td class="num">3</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -644,13 +645,13 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">3</td><td class="num">8</td><td class="num">0</td><td class="num">1</td><td class="num">2</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">3</td><td class="num">8</td><td class="num">0</td><td class="num">1</td><td class="num">2</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -683,14 +684,14 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">2</td></tr>
-<tr><td><strong>Expectation Mismatch</strong></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">2</td><td class="num">1</td><td class="num">2</td><td class="num">3</td></tr>
-<tr><td><strong>Others</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
-<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">1</td><td class="num">8</td><td class="num">1</td><td class="num">3</td><td class="num">6</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">0</td></tr>
+<tr><td><strong>Expectation Mismatch</strong></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">2</td><td class="num">1</td><td class="num">2</td><td class="num">3</td><td class="num">0</td></tr>
+<tr><td><strong>Others</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">1</td><td class="num">8</td><td class="num">1</td><td class="num">3</td><td class="num">6</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -728,12 +729,12 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">2</td><td class="num">5</td><td class="num">0</td><td class="num">2</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">1</td><td class="num">2</td><td class="num">0</td><td class="num">2</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num">1</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">3</td><td class="num">7</td><td class="num">3</td><td class="num">3</td><td class="num">3</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">2</td><td class="num">5</td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">1</td><td class="num">1</td><td class="num">2</td><td class="num">0</td><td class="num">2</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">3</td><td class="num">7</td><td class="num">3</td><td class="num">3</td><td class="num">3</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -771,14 +772,14 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">2</td></tr>
-<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">2</td><td class="num">7</td><td class="num">2</td><td class="num">2</td><td class="num">3</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">2</td><td class="num">0</td></tr>
+<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">2</td><td class="num">7</td><td class="num">2</td><td class="num">2</td><td class="num">3</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -813,12 +814,12 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">5</td><td class="num">0</td><td class="num">1</td><td class="num">1</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">1</td><td class="num">7</td><td class="num">1</td><td class="num">2</td><td class="num">1</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">5</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">1</td><td class="num">7</td><td class="num">1</td><td class="num">2</td><td class="num">1</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -849,11 +850,11 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">3</td><td class="num">4</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">3</td><td class="num">4</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -869,7 +870,7 @@
 <tr><td class="date">Fri 8/28</td><td>Client requesting an urgent revision on a real estate gallery — reduce overall brightness/exposure (especially exterior shots), restore the natural sunset/twilight atmosphere from the 7:30 PM shoot, and correct exterior colors to accurately represent the house. Customer prefers a specific edit: warmer tone, less exposure, natural color tone.</td><td class="issue"><strong>Client Preference</strong> — Visual Style/Preference</td><td class="source source-Customer">Customer</td></tr>
 <tr><td class="date">Sat 8/29</td><td>eRep flagged missing required shots — driver-side profile, rear driver-side 3/4, center lead interior photo — with reference URL to the client&#x27;s shot list. Requested images weren&#x27;t included in the RAWs.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-PG">Photographer</td></tr>
 </tbody></table>
-</section></div><div class="tab-pane active" id="tab-september"><div class="month-summary"><span>Total for September:</span> <strong>34</strong> total disputes (<strong>9</strong> Snappr QA at fault, <strong>2</strong> Editor at fault) across 3 weeks</div>
+</section></div><div class="tab-pane active" id="tab-september"><div class="month-summary"><span>Total for September:</span> <strong>48</strong> total disputes (<strong>10</strong> Snappr QA at fault, <strong>5</strong> Editor at fault) across 4 weeks</div>
 <section class="week">
   <h3>Aug 31 – Sep 6</h3>
   <div class="pills">
@@ -880,14 +881,14 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">2</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
-<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">3</td><td class="num">0</td></tr>
-<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">5</td><td class="num">6</td><td class="num">0</td><td class="num">5</td><td class="num">1</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">2</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">3</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Wrong Photos/Videos</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">5</td><td class="num">6</td><td class="num">0</td><td class="num">5</td><td class="num">1</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -923,14 +924,14 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr><td><strong>Others</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">0</td><td class="num">5</td><td class="num">2</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Others</strong></td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">0</td><td class="num">5</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -957,13 +958,13 @@
   
   <h4>Source Breakdown</h4>
   <table class="breakdown">
-<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th></tr></thead>
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
 <tbody>
-<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
-<tr class="total-row"><td><strong>Total</strong></td><td class="num">1</td><td class="num">5</td><td class="num">0</td><td class="num">3</td><td class="num">0</td></tr>
+<tr><td><strong>Client Preference</strong></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Expectation Mismatch</strong></td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Specification/Instruction Non-Compliance</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">1</td><td class="num">5</td><td class="num">0</td><td class="num">3</td><td class="num">0</td><td class="num">0</td></tr>
 </tbody></table>
   
   <h4>Detailed Summary</h4>
@@ -972,13 +973,52 @@
 <tbody>
 <tr><td class="date">Mon 9/14</td><td>eRep flagged that the files weren&#x27;t processed in the sizes they need. QA missed the required deliverables, assuming the booking was PAYG.</td><td class="issue"><strong>Client Preference</strong> — Client Technical Specification Revision</td><td class="source source-QA">QA</td></tr>
 <tr><td class="date">Tue 9/15</td><td>eRep relayed the seller wants 7 or 8 more photos of documents included in the gallery. Client was asking for more photos that weren&#x27;t in the RAW files.</td><td class="issue"><strong>Expectation Mismatch</strong> — Unmet Expectations</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Tue 9/15</td><td>eRep flagged a missing VIN plate photo (located on the driver&#x27;s door, visible when door is open). The VIN is in the image provided; client is looking for another version (VIN: 0K22S168423).</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Tue 9/15</td><td>CX reported the background color is inconsistent across the delivered product photos — expected all products cut out on a true white background (consistent with previous shoots) but only two images got that treatment. Admin transactions show 16 images should have background removal, but the submitted gallery only has 2.</td><td class="issue"><strong>Specification/Instruction Non-Compliance</strong> — Missed Special Instructions</td><td class="source source-QA">QA</td></tr>
-<tr><td class="date">Wed 9/16</td><td>eRep flagged missing photos of unit 228. Unit 228 was available in the RAW uploads folder; each unit has an identical interior design, and QA and editor missed including the said unit.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-QA">QA</td></tr>
-<tr><td class="date">Wed 9/16</td><td>eRep flagged missing additional underside photos shot from the front of the vehicle. All required and available shots in the RAW file were submitted; the PG did not have any extra underbody shots from the front of the vehicle.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-PG">Photographer</td></tr>
-<tr><td class="date">Thu 9/17</td><td>GYG requested editing adjustments for the Ho Chi Minh destination shoot — add depth/richness to flat grey outdoor photos, warm up cold colors, and brighten dark mixed-lighting indoor market shots. The GYG-provided filters were used; the client is only requesting minor quality adjustments.</td><td class="issue"><strong>Expectation Mismatch</strong> — Unmet Expectations</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Thu 9/17</td><td>eRep relayed the customer is missing some photos from the adult male T-shirt shoot and wants the T-shirt photos resent with the full shirt visible and less cropping. Per Owner guidelines, cropping to 4:5/5:4 is required and merchandise isn&#x27;t in the shotlist; the shirt is in the submitted gallery, but there are unique shots not included.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
-<tr><td class="date">Thu 9/17</td><td>Request for JOLT — the PG completed a reshoot after missing photos of four charging stations, and the reshoot photos (shared via Drive link) need to be added to the gallery. Additional photos from the reshoot requested to be added to the original completed booking.</td><td class="issue"><strong>Client Preference</strong> — Client Photo Addition/Replacement</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Tue 9/15</td><td>eRep flagged a missing VIN plate photo (driver&#x27;s door, visible when door is open). The VIN is in the image provided; client is looking for another version (VIN: 0K22S168423).</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Tue 9/15</td><td>CX reported inconsistent background color across delivered product photos — expected all products cut out on a true white background, but only two got that treatment. Admin transactions show 16 images should have background removal, but the gallery only has 2.</td><td class="issue"><strong>Specification/Instruction Non-Compliance</strong> — Missed Special Instructions</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Wed 9/16</td><td>eRep flagged missing photos of unit 228. Unit 228 was available in the RAW uploads; each unit has an identical interior design, and QA and editor missed including the said unit.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Wed 9/16</td><td>eRep flagged missing additional underside photos shot from the front of the vehicle. All required and available shots in the RAW file were submitted; the PG did not have any extra underbody shots from the front.</td><td class="issue"><strong>Client Preference</strong> — Additional Shots Request</td><td class="source source-PG">Photographer</td></tr>
+<tr><td class="date">Thu 9/17</td><td>GYG requested editing adjustments for the Ho Chi Minh destination shoot — add depth/richness to flat grey outdoor photos, warm up cold colors, brighten dark indoor market shots. The GYG-provided filters were used; the client is only requesting minor quality adjustments.</td><td class="issue"><strong>Expectation Mismatch</strong> — Unmet Expectations</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Thu 9/17</td><td>eRep relayed the customer is missing photos from the adult male T-shirt shoot and wants them resent with the full shirt visible and less cropping. Per Owner guidelines, 4:5/5:4 cropping is required and merchandise isn&#x27;t in the shotlist; the shirt is in the gallery, but there are unique shots not included.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Thu 9/17</td><td>Request for JOLT — the PG completed a reshoot after missing photos of four charging stations, and the reshoot photos (shared via Drive link) need to be added to the gallery. Additional reshoot photos requested to be added to the original completed booking.</td><td class="issue"><strong>Client Preference</strong> — Client Photo Addition/Replacement</td><td class="source source-Customer">Customer</td></tr>
+</tbody></table>
+</section>
+<section class="week">
+  <h3>Sep 21 – Sep 27</h3>
+  <div class="pills">
+    <span class="total-pill">Total Disputes: <strong>14</strong></span>
+    <span class="qa-pill">Snappr QA at fault: <strong>1</strong></span>
+    <span class="editor-pill">Editor at fault: <strong>3</strong></span>
+  </div>
+  
+  <h4>Source Breakdown</h4>
+  <table class="breakdown">
+<thead><tr><th>Major Issue</th><th class="num">PG</th><th class="num">Customer</th><th class="num">Editor</th><th class="num">QA</th><th class="num">Process</th><th class="num">Disputed</th></tr></thead>
+<tbody>
+<tr><td><strong>Client Preference</strong></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><strong>Expectation Mismatch</strong></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Missing Photos/Videos</strong></td><td class="num">0</td><td class="num">1</td><td class="num">3</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><strong>Quality Issues</strong></td><td class="num">0</td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td></tr>
+<tr class="total-row"><td><strong>Total</strong></td><td class="num">1</td><td class="num">7</td><td class="num">3</td><td class="num">1</td><td class="num">1</td><td class="num">1</td></tr>
+</tbody></table>
+  
+  <h4>Detailed Summary</h4>
+  <table class="summary">
+<thead><tr><th style="width:7%">Date</th><th style="width:55%">Customer Dispute</th><th style="width:25%">Issue</th><th style="width:13%">Source</th></tr></thead>
+<tbody>
+<tr><td class="date">Mon 9/21</td><td>eRep flagged that videos were missing; the PG had uploaded them. Per the booking details this wasn&#x27;t under the Videography package so video wasn&#x27;t required, but the editor could have added the available videos — this is also a No Touch booking.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Editor">Editor</td></tr>
+<tr><td class="date">Mon 9/21</td><td>CX said the photos are great overall but the lighting feels too bright and almost clinical (like hospital lighting) and asked for a warmer, more natural look — lower exposure/highlights, recover shadows, soften harsh light. Color balance is accurate based on the RAW files and the edits meet the quality standard.</td><td class="issue"><strong>Quality Issues</strong> — White Balance / Color</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Mon 9/21</td><td>eRep relayed the seller says a video was taken showing the convertible top opening and closing but it wasn&#x27;t included in the gallery. Editor missed uploading the retractable-top video.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Editor">Editor</td></tr>
+<tr><td class="date">Mon 9/21</td><td>PG relayed the customer said some vertical photos he wanted for Instagram weren&#x27;t included. Vertical photos and videos are in the completed gallery; some vertical photos were culled as duplicate shots.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Mon 9/21</td><td>eRep reported no VIN tag shot was delivered and it wasn&#x27;t flagged in the previous GNC. QA mistook the enamel paint code (which the PG had labeled as VIN) for the VIN; the foreign-language writing made it hard to detect, but QA should have researched the code online to verify.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Missing Required Shots</td><td class="source source-QA">QA</td></tr>
+<tr><td class="date">Tue 9/22</td><td>eRep relayed that for Louisa Chan edit 2 the client wants her skin made less tan, saying she&#x27;s not light enough. The client is requesting an exposure re-edit, but the exposure is already balanced and accurate throughout the gallery and meets Snappr standard.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Wed 9/23</td><td>GYG asked for color adjustments on the Ho Chi Minh shoot — add depth/richness to flat grey outdoor photos, warm up cold colors, and even out dark mixed-lighting indoor market shots. The client is requesting a color adjustment to add more vibrance to the photos.</td><td class="issue"><strong>Quality Issues</strong> — White Balance / Color</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Thu 9/24</td><td>eRep flagged that the background quality in the latest Privia gallery doesn&#x27;t match the brighter, more consistent look of a previous session, and asked to remove the embroidered name from Dr. Fellers&#x27; white coat and avoid using unedited versions. Client is requesting the same edits as another booking with a different background, plus advanced edits not included in the basic package.</td><td class="issue"><strong>Client Preference</strong> — Visual Style/Preference</td><td class="source source-Process">No QA: Skip QA</td></tr>
+<tr><td class="date">Thu 9/24</td><td>eRep relayed the seller says photos of spare parts were taken but weren&#x27;t included in the final gallery, on a short timeline. Editor missed adding the spare parts photos that were in the RAW files; although not required shots, all relevant spare parts images should have been included.</td><td class="issue"><strong>Missing Photos/Videos</strong> — Incomplete Gallery</td><td class="source source-Editor">Editor</td></tr>
+<tr><td class="date">Thu 9/24</td><td>eRep relayed the office manager (Gladys) reviewed the photos with her team and requested gallery-wide lighting adjustments — bright glares on faces and dark, unflattering shadows, with overall unbalanced lighting. Exposure and highlights are within standard; the glare on faces is natural and not blown out, and reducing it further may make the edits look flat.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Fri 9/25</td><td>GYG gave feedback that shadow areas across the batch are too dark, especially in shots with strong directional light — buildings/streets on the shadow side and darker foreground elements are losing detail; asked to lift shadows for more balanced exposure. Exposure is within the expected standard with no harsh shadows or crushed blacks; overall balanced and natural.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Fri 9/25</td><td>eRep said the gallery looks quite washed out and some photos (like the wheels) are blurry, and asked whether it can be re-edited or re-shot. The shoot was done under very bright sunlight, causing haze; the editor managed to sharpen the images, but the gallery should have been flagged for a quality issue since most exterior shots were affected.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Disputed">Disputed</td></tr>
+<tr><td class="date">Fri 9/25</td><td>eRep relayed the seller is unhappy with two photos that have a poorly-applied Photoshop-mask &#x27;shadow&#x27; outline around the car, and asked for those two to be re-edited to remove the shadow. Client requested brighter shadows, but the exposure throughout the gallery is within standard; lifting the shadows further may introduce more grain and noise.</td><td class="issue"><strong>Quality Issues</strong> — Brightness / Exposure</td><td class="source source-Customer">Customer</td></tr>
+<tr><td class="date">Sat 9/26</td><td>Client is very unhappy with the final gallery and says the photos aren&#x27;t suitable for her website — citing awkward cropping/angles, unflattering selections, distracting elements, and compositions that don&#x27;t represent her or her work; she also felt the shoot was rushed. The concerns primarily relate to photography execution (composition, posing, wardrobe, shot selection, moments captured) rather than post-production; no cropping issues or awkward selections in the gallery and all requirements met.</td><td class="issue"><strong>Expectation Mismatch</strong> — Unmet Expectations</td><td class="source source-PG">Photographer</td></tr>
 </tbody></table>
 </section></div>
 <script>
